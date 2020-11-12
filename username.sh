@@ -3,7 +3,7 @@
 # Minna Yu
 echo "Enter a username: "
 read USER
-while echo "$USER" | egrep -x "^[a-z][a-z0-9_]{3,12}$" > /dev/null 2>&1
+while echo "$USER" | egrep -v "^[a-z][a-z0-9_]{2,11}$" > /dev/null 2>&1
 do
 	echo "You must enter a valid username!"
 	echo "Must start with a letter, contain numbers, and be at least 3 characters but no more than 12."
